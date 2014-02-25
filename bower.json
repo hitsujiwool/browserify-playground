@@ -1,0 +1,6 @@
+{
+  "name": "browerify-playground",
+  "dependencies": {
+    "moment": "2.5.1"
+  }
+}

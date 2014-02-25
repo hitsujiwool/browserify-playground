@@ -1,0 +1,37 @@
+doctype html
+html(lang='ja')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 browserify-playground
+    h2
+      a(href='personal') personal
+    p 自作のモジュールのbrowseriry
+    h2
+      a(href='built-in') built-in
+    p 組み込みモジュールのbrowserify
+    h2
+      a(href='empty') empty
+    p 組み込みモジュール（ブラウザ非対応）のbrowserify
+    h2
+      a(href='exported') exported
+    p 
+      code require("exported")
+      | で外部からモジュールを呼び出す 
+    h2
+      a(href='exposify') exposify
+    p 
+      <code>window</code>のプロパティを<code>require()</code>する
+    h2
+      a(href='deglobalify') deglobalify
+    p 
+      <code>window</code>のプロパティを<code>exports</code>に置換して<code>require()</code>する
+    h2
+      a(href='deamdify') deamdify
+    p 
+      AMDスタイルのモジュールを<code>require()</code>できるようにする
+    h2
+      a(href='debowerify') debowerify
+    p 
+      bowerでインストールしたモジュールを<code>require()</code>できるようにする

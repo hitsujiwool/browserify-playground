@@ -1,0 +1,13 @@
+extends layout
+
+block code
+  pre
+    code EXPOSIFY_CONFIG='{ "leak": "foo" }' browserify src/exposify.js -t exposify
+
+block note
+  ul
+   li globalプロパティ<code>foo</code>を<code>require('leak')</code>として呼び出す。
+   li <code>window.foo</code>の定義された<code>public/javascripts/leak.js</code>は<code>script</code>タグで読み込む必要がある
+
+block script
+  script(src="/javascripts/leak.js")

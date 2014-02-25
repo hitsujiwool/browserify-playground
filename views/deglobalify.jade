@@ -1,0 +1,10 @@
+extends layout
+
+block code
+  pre
+    code browserify src/deglobalify.js -t deglobalify
+
+block note
+  ul
+   li exposifyと異なり、<code>window</code>を<code>exports</code>に変換することで、グローバルリーク自体を防ぐ
+   li <code>require()</code>の第2引数に指定したプロパティのみが展開される

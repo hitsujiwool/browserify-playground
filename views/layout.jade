@@ -1,0 +1,19 @@
+doctype html
+html(lang='ja')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1
+      = script
+    block note
+    block code
+    h2 Inputs
+    each file in inputs
+      h3
+        = file.name
+      != file.body
+    h2 Output (#{output.name})
+    != output.body
+    block script
+    script(src="/javascripts/#{script}")

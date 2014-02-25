@@ -1,0 +1,27 @@
+{
+  "name": "browserify-playground",
+  "version": "0.0.1",
+  "private": true,
+  "description": "browserify playground",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryo Murayama <utatanenohibi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "0.2.10",
+    "express": "3.4.7",
+    "browserify": "3.30.2",
+    "marked": "0.3.1",
+    "highlight": "0.2.3",
+    "superagent": "0.16.0",
+    "deglobalify": "0.2.0",
+    "exposify": "0.1.3",
+    "deamdify": "0.1.1",
+    "debowerify": "0.6.0",
+    "bower": "1.2.8",
+    "jade": "*"
+  }
+}
