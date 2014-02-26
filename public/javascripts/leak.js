@@ -1,12 +1,21 @@
 
-window.foo = function() {
-  console.log('globally defined function');
-};
+/*
+ * src/leak.js
+ */
 
-this.bar = function() {
-  console.log('globally defined function, too');
+window.foo = function() {
+  console.log('this is foo')
 };
 
 window.baz = function() {
-  console.log('not executed');
+  console.log('this is bar');
 };
+
+(function(exports) {
+
+  exports.bar = function() {
+    console.log('this is baz');
+  };
+  
+})(window);
+

@@ -4,8 +4,12 @@
  * src/exposify.js
  */
 
-var leak = (window.foo);
+var a = (window.foo);
+var b = (window.bar);
+var c = (window.baz);
 
-leak();
+a();
+b();
+c();
 
 },{}]},{},[1])

@@ -93,7 +93,7 @@ app.get('/deglobalify', handle('deglobalify.js', function(b) {
 }, { view: 'deglobalify' }));
 
 app.get('/exposify', handle('exposify.js', function(b) {
-  exposify.config = { leak: 'foo' };
+  exposify.config = { leakedFoo: 'foo', leakedBar: 'bar', leakedBaz: 'baz' };
   b.transform(exposify);
 }, { view: 'exposify' }));
 

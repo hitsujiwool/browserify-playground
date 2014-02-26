@@ -3,6 +3,10 @@
  * src/exposify.js
  */
 
-var leak = require('leak');
+var a = require('leakedFoo');
+var b = require('leakedBar');
+var c = require('leakedBaz');
 
-leak();
+a();
+b();
+c();
