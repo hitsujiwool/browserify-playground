@@ -4,7 +4,7 @@
  */
 
 window.foo = function() {
-  console.log('this is foo')
+  console.log('this is foo');
 };
 
 window.baz = function() {
