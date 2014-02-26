@@ -19,6 +19,8 @@ var exposify = require('exposify');
 var deglobalify = require('deglobalify');
 var deamdify = require('deamdify');
 var debowerify = require('debowerify');
+var coffeeify = require('coffeeify');
+var hbsfy = require('hbsfy');
 
 var app = express();
 
@@ -104,6 +106,15 @@ app.get('/deamdify', handle('deamdify.js', function(b) {
 app.get('/debowerify', handle('debowerify.js', function(b) {
   b.transform(debowerify);
 }, { view: 'debowerify' }));
+
+app.get('/coffeeify', handle('coffeeify.js',function(b) {
+  b.transform(coffeeify);
+}));
+
+app.get('/hbsfy', handle('hbsfy.js', function(b) {
+  b.transform(hbsfy);
+}));
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
