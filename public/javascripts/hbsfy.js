@@ -477,6 +477,11 @@ module.exports = require('./dist/cjs/handlebars.runtime');
 module.exports = require("handlebars/runtime")["default"];
 
 },{"handlebars/runtime":7}],9:[function(require,module,exports){
+
+/*
+ * src/hbsfy.js
+ */
+
 var template = require('./template.hbs');
 
 console.log(template({ animal: 'sheep' }));
